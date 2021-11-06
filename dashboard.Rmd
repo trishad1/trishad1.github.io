@@ -1,0 +1,86 @@
+---
+title: "Instacart dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(p8105.datasets)
+library(tidyverse)
+library(plotly)
+
+data("instacart")
+instacart
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Order hour of day based on what day of the week it is
+
+```{r}
+
+# instacart %>%
+#   mutate(department = fct_reorder(department, order_hour_of_day)) %>%
+#   plot_ly(y=~order_hour_of_day, color = ~department, type = "box", colors = "viridis") %>%
+#   layout(title = 'Order Hour of Day by Department Ordered From')
+
+instacart %>%
+  mutate(order_dow = factor(order_dow)) %>%
+  plot_ly(y=~order_hour_of_day, color = ~order_dow, type = "box", colors = "viridis") %>%
+  layout(title = 'Order hour of day based on day of the week')
+
+
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Number of items ordered from each aisle, for items ordered more than 10,000 times
+
+```{r}
+options(
+  ggplot2.continuous.colour = "viridis",
+  ggplot2.continuous.fill = "viridis"
+)
+scale_colour_discrete = scale_color_viridis_d
+scale_fill_discrete = scale_fill_viridis_d
+
+aisle_info = 
+  instacart %>%
+  group_by(aisle, aisle_id) %>%
+  count(aisle) %>%
+  arrange(desc(n)) %>%
+  rename(num_items_ordered = n)
+
+aisle_info %>%
+  filter(num_items_ordered > 10000) %>%
+  ggplot(aes(x=num_items_ordered, y=reorder(aisle, num_items_ordered),fill=num_items_ordered)) +
+  geom_bar(stat='identity') +
+  ggtitle("Number of items ordered in each aisle") +
+  xlab("Number items ordered") + ylab("Aisle name")
+
+```
+
+### The average order size based on what day of the week it is
+
+```{r}
+order_info = 
+  instacart %>%
+  group_by(order_dow, order_id) %>%
+  count(order_id)
+
+order_info %>%
+  group_by(order_dow) %>%
+  mutate(
+    mean_order_size = mean(n)
+  ) %>%
+  ggplot(aes(x=order_dow,y=mean_order_size)) +
+  geom_line() +
+  ggtitle("Average order size by day of the week ordered")
+
+```
+
