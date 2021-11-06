@@ -9,15 +9,9 @@ output:
 # Welcome to my website!
 
 
-This is my personal website project for P8105. Here, you'll find information on my academic and industry  experiences with links to professional networks and my contact information. On the dashboard page, you'll find information and figures about weather data from the National Climatic Data Center of The National Oceanic and Atmospheric Association (NOAA) of the National Centers for Environmental Information (NCEI). 
+This is my personal website project for P8105. Here, you'll find information on my academic and industry  experiences in the about page, with links to my professional networks and my contact information. On the dashboard page, you'll find information and figures about Instacart data from an online grocery shopping dataset from 2017.
 
-```{r}
+<img src="images/welcome.jpeg" style="width:50%">
+<img src="images/instacart.jpeg" style="width:50%">
 
-library(p8105.datasets)
-```
-
-
-```{r}
-data("nydat")
-```
 
