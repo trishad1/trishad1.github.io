@@ -8,3 +8,16 @@ output:
 
 # Welcome to my website!
 
+
+This is my personal website project for P8105. Here, you'll find information on my academic and industry  experiences with links to professional networks and my contact information. On the dashboard page, you'll find information and figures about weather data from the National Climatic Data Center of The National Oceanic and Atmospheric Association (NOAA) of the National Centers for Environmental Information (NCEI). 
+
+```{r}
+
+library(p8105.datasets)
+```
+
+
+```{r}
+data("nydat")
+```
+

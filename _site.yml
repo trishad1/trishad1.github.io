@@ -9,6 +9,8 @@ navbar:
       href: mailto:<td2704@cumc.columbia.edu>
     - icon: fa-github fa-lg
       href: http://github.com/trishad1/
+    - icon: fa-linkedin fa-lg
+      href: https://www.linkedin.com/in/trishadwivedi/
 output:
   html_document:
     theme: cosmo
