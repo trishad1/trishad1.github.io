@@ -19,19 +19,15 @@ instacart
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Order hour of day based on what day of the week it is
+### Order hour of day based on department ordered from
 
 ```{r}
 
-# instacart %>%
-#   mutate(department = fct_reorder(department, order_hour_of_day)) %>%
-#   plot_ly(y=~order_hour_of_day, color = ~department, type = "box", colors = "viridis") %>%
-#   layout(title = 'Order Hour of Day by Department Ordered From')
-
 instacart %>%
-  mutate(order_dow = factor(order_dow)) %>%
-  plot_ly(y=~order_hour_of_day, color = ~order_dow, type = "box", colors = "viridis") %>%
-  layout(title = 'Order hour of day based on day of the week')
+  mutate(department = fct_reorder(department, order_hour_of_day)) %>%
+  plot_ly(y=~order_hour_of_day, color = ~department, type = "box", colors = "viridis") %>%
+  layout(title = 'Order Hour of Day by Department Ordered From')
+
 
 
 ```
