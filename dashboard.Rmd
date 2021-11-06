@@ -54,10 +54,14 @@ aisle_info =
 
 aisle_info %>%
   filter(num_items_ordered > 10000) %>%
-  ggplot(aes(x=num_items_ordered, y=reorder(aisle, num_items_ordered),fill=num_items_ordered)) +
-  geom_bar(stat='identity') +
-  ggtitle("Number of items ordered in each aisle") +
-  xlab("Number items ordered") + ylab("Aisle name")
+  mutate(aisle = fct_reorder(aisle, num_items_ordered)) %>%
+  plot_ly(y=~aisle, x=~num_items_ordered, color = ~aisle, type = "bar", colors = "viridis") %>%
+  layout(title = 'Number of items ordered in each aisle')
+
+  # ggplot(aes(x=num_items_ordered, y=reorder(aisle, num_items_ordered),fill=num_items_ordered)) +
+  # geom_bar(stat='identity') +
+  # ggtitle("Number of items ordered in each aisle") +
+  # xlab("Number items ordered") + ylab("Aisle name")
 
 ```
 
@@ -74,9 +78,13 @@ order_info %>%
   mutate(
     mean_order_size = mean(n)
   ) %>%
-  ggplot(aes(x=order_dow,y=mean_order_size)) +
-  geom_line() +
-  ggtitle("Average order size by day of the week ordered")
+  plot_ly(x=~order_dow, y=~mean_order_size, mode = 'lines+markers') %>%
+  layout(title = 'Average order size by day of the week ordered')
+
+
+  # ggplot(aes(x=order_dow,y=mean_order_size)) +
+  # geom_line() +
+  # ggtitle("Average order size by day of the week ordered")
 
 ```
 
