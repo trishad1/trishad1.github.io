@@ -16,26 +16,26 @@ title: "About me"
 
 <font size="5"> **Professional experience and projects:** </font>
 
-**Data Scientist, AliveCor (part-time)**, Aug 2020-present
+**Data Scientist, AliveCor (part-time)**, Aug 2020-present  
 Working on the AI and Data Science team to perform data analytics on and develop new models revolving around ECG data. Develop new algorithms to cluster ECG embeddings in meaningful ways and detect new conditions. Perform data mining tasks and exploration of new project areas.
 
-<img src="images/alivecor.png" style="width:20%">
+<img src="images/alivecor.png" style="width:20%">  
 
 
 **Research Collaboration, Mass Gen Hospital, Harvard Medical School**, June 2020-present	
 COVID-19 Simulator: covid19sim.org. Health economic modeling and data analysis. Led analysis for spread of COVID-19 cases on college campuses. Published in STAT News: https://www.statnews.com/2020/10/27/reopen-colleges-universities-safely-spring-2021/
 
-<img src="images/mgh.png" style="width:20%">
+<img src="images/mgh.png" style="width:20%">  
 
 
-**Computational Researcher, Computational Biology Dept., CMU.**, June-Aug 2020
+**Computational Researcher, Computational Biology Dept., CMU.**, June-Aug 2020  
 Training SVMs to find cell type specific sequences for retinal cells to develop targeted gene therapy techniques. Understand which retinal cell types contribute to retinal conditions and design sequences that correlate most  with certain mutations.
 
-<img src="images/compbio.jpeg" style="width:20%">
+<img src="images/compbio.jpeg" style="width:20%">   
 
 
-**Software Development Engineer Intern, Amazon**, Summer 2020, Summer 2019
-(2020) Feature development of new rating and review 	engine for AWS Console iOS mobile application for on-the-go monitoring.
+**Software Development Engineer Intern, Amazon**, Summer 2020, Summer 2019  
+(2020) Feature development of new rating and review engine for AWS Console iOS mobile application for on-the-go monitoring.  
 (2019) Developed internal tool using AWS services for Automated Profitability Management to help automate the generation of best suggested price for vendors to sell at on Amazon. 
 
 <img src="images/amazon.svg" style="width:20%">
